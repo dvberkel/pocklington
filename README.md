@@ -16,3 +16,10 @@ you to add the current directory to the `PYTHONPATH`. I use the
 following command for this:
 
     export PYTHONPATH=.
+
+Test
+----
+
+To run all test in the project execute the command
+
+    python pocklington/test/test_all.py
