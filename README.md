@@ -15,4 +15,4 @@ In order to allow python to see the project definitions I encourage
 you to add the current directory to the `PYTHONPATH`. I use the
 following command for this:
 
-    export $PYTHONPATH=.
+    export PYTHONPATH=.
