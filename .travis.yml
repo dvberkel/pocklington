@@ -1,0 +1,5 @@
+language: python
+
+before_script: export PYTHONPATH=.
+
+script: python pocklington/test/test_all.py 
