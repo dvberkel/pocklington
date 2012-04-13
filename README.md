@@ -1,6 +1,8 @@
 Pocklington
 ===========
 
+[![Build Status](https://secure.travis-ci.org/dvberkel/pocklington.png?branch=master)](http://travis-ci.org/dvberkel/pocklington)
+
 The Pocklington project aims to provide an implementation of the 
 [Pocklington Primality Test](http://en.wikipedia.org/wiki/Pocklington_primality_test "Wikipedia on Pocklington's criteria").
 
