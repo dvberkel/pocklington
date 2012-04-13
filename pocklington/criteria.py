@@ -4,7 +4,7 @@ class PrimalityTester:
         p = 2 * q + 1           # p satisfies q | p-1
         a = self.candidateTo(p) # s satisfies a**(p-1) % p == 1 mod p        
         
-        return self.gcd(a**((p-1)/q) - 1, p) == 1
+        return self.gcd(self.pow(a,(p-1)/q) - 1, p) == 1
 
     def candidateTo(self, p):
         """Return an a such that a**(p-1) % p == 1"""
@@ -20,6 +20,15 @@ class PrimalityTester:
             if (exponent % 2 != 0):
                 result = (result * power) % modulus
             exponent, power = exponent / 2, power**2 % modulus
+        return result
+
+    def pow(self, a, exponent):
+        """Return a**exponent"""
+        result, power = 1, a
+        while (exponent > 0):
+            if (exponent % 2 != 0):
+                result = (result * power)
+            exponent, power = exponent / 2, power**2
         return result
     
     def gcd(self, a, b):
