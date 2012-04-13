@@ -15,7 +15,12 @@ class PrimalityTester:
 
     def powmod(self, a, exponent, modulus):
         """Return a**exponent % modulus"""
-        return a**exponent % modulus
+        result, power = 1, a
+        while (exponent > 0):
+            if (exponent % 2 != 0):
+                result = (result * power) % modulus
+            exponent, power = exponent / 2, power**2 % modulus
+        return result
     
     def gcd(self, a, b):
         while (b != 0):
